@@ -11,6 +11,8 @@
 		E6C3658628BA700100366642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C3658528BA700100366642 /* ContentView.swift */; };
 		E6C3658828BA700200366642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C3658728BA700200366642 /* Assets.xcassets */; };
 		E6C3658C28BA700200366642 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C3658B28BA700200366642 /* Preview Assets.xcassets */; };
+		E6C3659628BA709B00366642 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C3659528BA709B00366642 /* Post.swift */; };
+		E6C3659828BA710600366642 /* PostDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C3659728BA710600366642 /* PostDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		E6C3658728BA700200366642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6C3658928BA700200366642 /* iOS16_NewFeaturesSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS16_NewFeaturesSwiftUI.entitlements; sourceTree = "<group>"; };
 		E6C3658B28BA700200366642 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6C3659528BA709B00366642 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E6C3659728BA710600366642 /* PostDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDirectory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		E6C3658228BA700100366642 /* iOS16-NewFeaturesSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E6C3659228BA702200366642 /* Models */,
+				E6C3659928BA760200366642 /* Controllers */,
+				E6C3659428BA703B00366642 /* Views */,
 				E6C3658328BA700100366642 /* iOS16_NewFeaturesSwiftUIApp.swift */,
-				E6C3658528BA700100366642 /* ContentView.swift */,
 				E6C3658728BA700200366642 /* Assets.xcassets */,
 				E6C3658928BA700200366642 /* iOS16_NewFeaturesSwiftUI.entitlements */,
 				E6C3658A28BA700200366642 /* Preview Content */,
@@ -67,6 +73,30 @@
 				E6C3658B28BA700200366642 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6C3659228BA702200366642 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6C3659528BA709B00366642 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6C3659428BA703B00366642 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6C3658528BA700100366642 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6C3659928BA760200366642 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6C3659728BA710600366642 /* PostDirectory.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C3659628BA709B00366642 /* Post.swift in Sources */,
+				E6C3659828BA710600366642 /* PostDirectory.swift in Sources */,
 				E6C3658628BA700100366642 /* ContentView.swift in Sources */,
 				E6C3658428BA700100366642 /* iOS16_NewFeaturesSwiftUIApp.swift in Sources */,
 			);
