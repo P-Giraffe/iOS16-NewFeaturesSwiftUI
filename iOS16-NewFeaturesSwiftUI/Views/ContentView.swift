@@ -30,13 +30,14 @@ struct ContentView: View {
                     Section(header:Text(category.rawValue)) {
                         ForEach(_postDirectory.filterCategory(category: category), id:\.self) { post in
                             NavigationLink(
-                                destination: PostDetail(_post: post).navigationTitle(post._name)) {
-                                    Label(post._name, systemImage: "newspaper")
+                                destination: PostDetail(_post: post).navigationTitle(post._name)){
+                                    Text(post._name)
                                 }
                         }
                     }
                 }
             }
+            .navigationViewStyle(.stack)
             .navigationTitle("Categories")
         }
     }
