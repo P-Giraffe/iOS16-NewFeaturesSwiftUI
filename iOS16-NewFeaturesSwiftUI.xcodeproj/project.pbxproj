@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E684BE5B28D1BE7E00C77791 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684BE5A28D1BE7E00C77791 /* Subscription.swift */; };
+		E684BE5D28D1BEBC00C77791 /* SubscriptionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684BE5C28D1BEBC00C77791 /* SubscriptionList.swift */; };
 		E6C3658428BA700100366642 /* iOS16_NewFeaturesSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C3658328BA700100366642 /* iOS16_NewFeaturesSwiftUIApp.swift */; };
 		E6C3658628BA700100366642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C3658528BA700100366642 /* ContentView.swift */; };
 		E6C3658828BA700200366642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C3658728BA700200366642 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E684BE5A28D1BE7E00C77791 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		E684BE5C28D1BEBC00C77791 /* SubscriptionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionList.swift; sourceTree = "<group>"; };
 		E6C3658028BA700100366642 /* iOS16-NewFeaturesSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS16-NewFeaturesSwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C3658328BA700100366642 /* iOS16_NewFeaturesSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS16_NewFeaturesSwiftUIApp.swift; sourceTree = "<group>"; };
 		E6C3658528BA700100366642 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C3659528BA709B00366642 /* Post.swift */,
+				E684BE5A28D1BE7E00C77791 /* Subscription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C3659728BA710600366642 /* PostDirectory.swift */,
+				E684BE5C28D1BEBC00C77791 /* SubscriptionList.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +179,8 @@
 				E6C3659828BA710600366642 /* PostDirectory.swift in Sources */,
 				E6C3658628BA700100366642 /* ContentView.swift in Sources */,
 				E6C3658428BA700100366642 /* iOS16_NewFeaturesSwiftUIApp.swift in Sources */,
+				E684BE5D28D1BEBC00C77791 /* SubscriptionList.swift in Sources */,
+				E684BE5B28D1BE7E00C77791 /* Subscription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
