@@ -57,7 +57,7 @@ struct LearnTimerActivityWidget: Widget {
                         .monospacedDigit()
                         .font(.caption2)
                 }
-            }
+            }.widgetURL(URL(string: "https://www.purplegiraffe.fr")!)
 
         }
 
@@ -72,11 +72,16 @@ struct LiveActivityView : View {
                 .font(.headline)
                 .multilineTextAlignment(.center)
             HStack {
-                Text(context.state.plannedDuration.lowerBound, style: .time)
+                Link(destination: URL(string: "https://www.purplegiraffe.fr/start")!) {
+                    Text(context.state.plannedDuration.lowerBound, style: .time)
+                }
                 ProgressView(timerInterval: context.state.plannedDuration, countsDown: false)
-                Text(context.state.plannedDuration.upperBound, style: .time)
+                Link(destination: URL(string: "https://www.purplegiraffe.fr/end")!) {
+                    Text(context.state.plannedDuration.upperBound, style: .time)
+                }
             }
         }.padding()
+            
     }
 }
 

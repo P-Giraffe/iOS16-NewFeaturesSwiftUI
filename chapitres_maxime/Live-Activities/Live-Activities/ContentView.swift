@@ -30,6 +30,9 @@ struct ContentView: View {
             }
         }
         .padding()
+        .onOpenURL { url in
+            status = url.absoluteString
+        }
     }
     
     func stopActivity(_ activity:Activity<LearnTimerAttributes>) async {
