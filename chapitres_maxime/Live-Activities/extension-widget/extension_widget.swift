@@ -16,7 +16,30 @@ struct LearnTimerActivityWidget: Widget {
             LiveActivityView(context: context)
         } dynamicIsland: { context in
             DynamicIsland {
-                <#code#>
+                DynamicIslandExpandedRegion(.leading) {
+                    HStack {
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                        Image(systemName: "graduationcap")
+                    }
+                }
+                DynamicIslandExpandedRegion(.bottom) {
+                    HStack {
+                        Text(context.state.plannedDuration.lowerBound, style: .time)
+                        ProgressView(timerInterval: context.state.plannedDuration, countsDown: false)
+                        Text(context.state.plannedDuration.upperBound, style: .time)
+                    }
+                }
+                DynamicIslandExpandedRegion(.trailing) {
+                    Text(timerInterval: context.state.plannedDuration, countsDown: true)
+                }
+                DynamicIslandExpandedRegion(.center) {
+                    Text(context.attributes.courseName)
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                    
+                }
             } compactLeading: {
                 Image("logo")
                     .resizable()
