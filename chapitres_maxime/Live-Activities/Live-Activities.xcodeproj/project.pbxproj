@@ -16,6 +16,8 @@
 		F8142DDF28D86DC2008499AD /* extension_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8142DDE28D86DC2008499AD /* extension_widget.swift */; };
 		F8142DE128D86DC3008499AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8142DE028D86DC3008499AD /* Assets.xcassets */; };
 		F8142DE528D86DC3008499AD /* extension-widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F8142DD728D86DC2008499AD /* extension-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F8142DEC28D86FF9008499AD /* LearnTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8142DEB28D86FF9008499AD /* LearnTimerAttributes.swift */; };
+		F8142DED28D86FF9008499AD /* LearnTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8142DEB28D86FF9008499AD /* LearnTimerAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		F8142DE028D86DC3008499AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8142DE228D86DC3008499AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8142DEA28D86E01008499AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F8142DEB28D86FF9008499AD /* LearnTimerAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTimerAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 				F8142DC728D86056008499AD /* ContentView.swift */,
 				F8142DC928D86057008499AD /* Assets.xcassets */,
 				F8142DCB28D86057008499AD /* Preview Content */,
+				F8142DEB28D86FF9008499AD /* LearnTimerAttributes.swift */,
 			);
 			path = "Live-Activities";
 			sourceTree = "<group>";
@@ -237,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8142DC828D86056008499AD /* ContentView.swift in Sources */,
+				F8142DEC28D86FF9008499AD /* LearnTimerAttributes.swift in Sources */,
 				F8142DC628D86056008499AD /* Live_ActivitiesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8142DDF28D86DC2008499AD /* extension_widget.swift in Sources */,
+				F8142DED28D86FF9008499AD /* LearnTimerAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
