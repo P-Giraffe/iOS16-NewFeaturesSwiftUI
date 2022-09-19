@@ -17,11 +17,25 @@ struct ContentView: View {
                 .resizable()
                 .frame(width: 100, height: 100)
             Text(status)
-            Button("Démarrer le minuteur") {
-                startLiveActivity()
+            if let activity = currentActivity {
+                Button("Terminé l'activité") {
+                    Task {
+                        await stopActivity(activity)
+                    }
+                }
+            } else {
+                Button("Démarrer le minuteur") {
+                    startLiveActivity()
+                }
             }
         }
         .padding()
+    }
+    
+    func stopActivity(_ activity:Activity<LearnTimerAttributes>) async {
+        await activity.end(dismissalPolicy: .immediate)
+        currentActivity = nil
+        status = "Activité terminée"
     }
     
     func startLiveActivity() {
