@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import ActivityKit
+
+struct LearnTimerAttributes : ActivityAttributes {
+    typealias ContentState = LearnTimerStatus
+    let courseName:String
+    public struct LearnTimerStatus: Codable, Hashable {
+        let plannedDuration:ClosedRange<Date>
+    }
+}
