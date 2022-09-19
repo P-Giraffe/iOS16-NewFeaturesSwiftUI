@@ -10,6 +10,7 @@ import ActivityKit
 
 struct ContentView: View {
     @State var status:String = ""
+    @State var currentInterval: ClosedRange<Date>?
     @State var currentActivity: Activity<LearnTimerAttributes>?
     var body: some View {
         VStack {
@@ -32,7 +33,28 @@ struct ContentView: View {
         .padding()
         .onOpenURL { url in
             status = url.absoluteString
+            if (url.pathComponents.contains("add-time")){
+                Task {
+                    await addTime()
+                }
+            } else if (url.pathComponents.contains("stop-timer")) {
+                if let activity = currentActivity {
+                    Task {
+                        await stopActivity(activity)
+                    }
+                }
+            }
         }
+    }
+    
+    func addTime() async {
+        guard let currentActivity = currentActivity, let interval = currentInterval else { return }
+        let newEndDate = interval.upperBound.addingTimeInterval(15 * 60)
+        let newInterval = interval.lowerBound...newEndDate
+        
+        await currentActivity.update(using: LearnTimerAttributes.LearnTimerStatus(plannedDuration: newInterval))
+        currentInterval = newInterval
+        status = "15 minutes ajoutées"
     }
     
     func stopActivity(_ activity:Activity<LearnTimerAttributes>) async {
@@ -52,6 +74,7 @@ struct ContentView: View {
         
         do {
             currentActivity = try Activity.request(attributes: attributes, contentState: state)
+            currentInterval = interval
             status = "Apprentissage débuté"
         } catch (let error) {
             status = "Erreur : \(error.localizedDescription)"

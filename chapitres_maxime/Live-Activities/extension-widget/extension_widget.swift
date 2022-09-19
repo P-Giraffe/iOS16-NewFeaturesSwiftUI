@@ -28,7 +28,13 @@ struct LearnTimerActivityWidget: Widget {
                     HStack {
                         Text(context.state.plannedDuration.lowerBound, style: .time)
                         ProgressView(timerInterval: context.state.plannedDuration, countsDown: false)
-                        Text(context.state.plannedDuration.upperBound, style: .time)
+                        Link(destination: URL(string: "https://www.purplegiraffe.fr/stop-timer")!) {
+                            Image(systemName: "stop.circle")
+                        }
+
+                        Link(destination: URL(string: "https://www.purplegiraffe.fr/add-time")!) {
+                            Image(systemName: "goforward.15")
+                        }
                     }
                 }
                 DynamicIslandExpandedRegion(.trailing) {
@@ -72,13 +78,9 @@ struct LiveActivityView : View {
                 .font(.headline)
                 .multilineTextAlignment(.center)
             HStack {
-                Link(destination: URL(string: "https://www.purplegiraffe.fr/start")!) {
-                    Text(context.state.plannedDuration.lowerBound, style: .time)
-                }
+                Text(context.state.plannedDuration.lowerBound, style: .time)
                 ProgressView(timerInterval: context.state.plannedDuration, countsDown: false)
-                Link(destination: URL(string: "https://www.purplegiraffe.fr/end")!) {
-                    Text(context.state.plannedDuration.upperBound, style: .time)
-                }
+                Text(context.state.plannedDuration.upperBound, style: .time)
             }
         }.padding()
             
